@@ -4,9 +4,24 @@ dialect  "mvel"
 rule "declareRule"
     when
     then
+        System.out.println("declareRule 触发了");
+        Address address = new Address();
+        address.setName("北京");
+        address.setPostNo(100000);
+        insert(address);
+end
+
+rule "declareRule-1"
+    when
+        Address(name == "上海")
+    then
+       System.out.println("declareRule-1 触发了");
 end
 
 declare Address
+
     name : String
     postNo : Integer
+
+end
 
