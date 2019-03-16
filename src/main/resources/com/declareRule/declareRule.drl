@@ -7,3 +7,6 @@ rule "declareRule"
 end
 
 declare Address
+    name : String
+    postNo : Integer
+
