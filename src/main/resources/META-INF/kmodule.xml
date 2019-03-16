@@ -1,0 +1,55 @@
+<kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
+    <kbase name="rules" packages="com.rules">
+        <ksession name="ksession-rules"/>
+    </kbase>
+    <kbase name="rule1" packages="com.less">
+        <ksession name="state-less-session" type="stateless"/>
+    </kbase>
+
+    <kbase name="rule2" packages="com.no-loop">
+        <ksession name="no-loop-rules"/>
+    </kbase>
+
+    <kbase name="rule3" packages="com.lock-on-active">
+        <ksession name="lock-on-active-rules"/>
+    </kbase>
+
+    <kbase name="rule4" packages="com.salience-test">
+        <ksession name="salience-rules"/>
+    </kbase>
+
+    <kbase name="rule5" packages="com.agendaGroup">
+        <ksession name="agenda-group-rules"/>
+    </kbase>
+    <kbase name="rule6" packages="com.timer-rule">
+        <ksession name="timer-rule"/>
+    </kbase>
+
+    <kbase name="insertKBase" packages="com.insertRule">
+        <ksession name="insert-rule"/>
+    </kbase>
+    <kbase name="deleteKBase" packages="com.deleteRule">
+        <ksession name="delete-rule"/>
+    </kbase>
+
+    <kbase name="modifyKBase" packages="com.modifyRule">
+        <ksession name="modify-rule"/>
+    </kbase>
+
+    <kbase name="conditionKBase" packages="com.conditionRule">
+        <ksession name="condition-rule"/>
+    </kbase>
+
+    <kbase name="queryKBase" packages="com.queryRule">
+        <ksession name="query-rule"/>
+    </kbase>
+
+    <kbase name="functionKBase" packages="com.functionRule">
+        <ksession name="function-rule"/>
+    </kbase>
+
+    <kbase name="declareBase" packages="com.declareRule">
+        <ksession name="declareRule"/>
+    </kbase>
+
+</kmodule>

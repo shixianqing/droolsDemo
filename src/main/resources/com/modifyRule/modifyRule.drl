@@ -1,0 +1,21 @@
+package com.modifyRule;
+import com.drools.model.Person
+dialect  "mvel"
+
+rule "modifyRule-1"
+    when
+        $p : Person(age == 12)
+    then
+        System.out.println("modifyRule-1 被触发了");
+        modify($p){
+            setAge(22)
+        }
+end
+
+rule "modifyRule-2"
+    lock-on-active true
+    when
+        $p : Person(age == 22)
+    then
+        System.out.println("modifyRule-2 被触发了");
+end

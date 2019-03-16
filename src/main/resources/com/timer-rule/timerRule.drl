@@ -1,0 +1,26 @@
+package com.timerRule;
+import com.drools.model.Person
+import java.util.Date
+dialect  "mvel"
+
+rule "timerRule"
+    /**
+       重复延时执行
+       int(delay repeat) 第一个参数：启动之后，延迟多长时间执行。第二个参数：每隔多久执行一次。
+    **/
+    timer(int: 0s 2s)
+    when
+        $p : Person(age < 10)
+    then
+        System.out.println("time："+new Date() + "age："+$p.getAge());
+end
+//rule "timerRule"
+//    /**
+//        定时执行规则,每2秒钟执行一次
+//    **/
+//    timer(cron: 0/2 * * * * ? )
+//    when
+//        $p : Person(age > 10)
+//    then
+//        System.out.println("time："+new Date() + "age："+$p.getAge());
+//end

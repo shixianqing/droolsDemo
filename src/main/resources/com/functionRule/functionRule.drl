@@ -1,0 +1,32 @@
+package com.functionRule;
+import java.util.Date
+dialect  "mvel"
+
+rule "functionRule"
+    when
+    then
+//        test();
+//        System.out.println(getDate());
+//        printMsg("printMsg");
+        System.out.println(cal(1,2));
+end
+
+
+function void test(){
+
+   System.out.println("进入test方法！");
+}
+
+function Date getDate(){
+
+    return new Date();
+}
+
+function void printMsg(String msg){
+    System.out.println(msg);
+}
+
+function Integer cal(Integer a,Integer b){
+
+    return a + b;
+}

@@ -1,0 +1,37 @@
+package com.conditionRule;
+import com.drools.model.Person
+import com.drools.model.Car
+dialect  "mvel"
+
+/**
+*   if(condition) do[标记名] then[标记名]
+*   把两条规则合并成一条规则，当条件全部满足时，执行默认操作
+**/
+
+
+rule "conditionRule-1"
+    no-loop true
+    when
+        $p : Person(age > 28)
+        if($p.age == 30) do[updatePerson]
+    then
+        System.out.println("conditionRule-1 触发了");
+//        modify($p){
+//           setAge(22)
+//        }
+
+    then[updatePerson]
+        System.out.println("执行updatePerson===="+$p);
+         modify($p){
+             setAge(11)
+          }
+
+end
+
+rule "conditionRule-2"
+        extends "conditionRule-1"
+    when
+        Car(discount > 80)
+    then
+        System.out.println("conditionRule-2 触发了");
+end

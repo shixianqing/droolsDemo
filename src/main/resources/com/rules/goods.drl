@@ -1,0 +1,10 @@
+package com.rules;
+import com.drools.model.Goods
+dialect  "mvel"
+
+rule "goods"
+    when
+        $goods : Goods(discount == 100)
+    then
+        $goods.setDiscount(90);
+end

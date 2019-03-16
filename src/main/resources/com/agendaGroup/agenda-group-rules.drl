@@ -1,0 +1,23 @@
+package com.agendaGroup;
+dialect  "mvel"
+
+rule "agenda-group-rules-1"
+  agenda-group "test1"
+    when
+    then
+        System.out.println("agenda-group-rules-1 被执行");
+end
+
+rule "agenda-group-rules-2"
+ agenda-group "test1"
+    when
+    then
+        System.out.println("agenda-group-rules-2 被执行");
+end
+
+rule "agenda-group-rules-3"
+ agenda-group "test3"
+    when
+    then
+        System.out.println("agenda-group-rules-3 被执行");
+end

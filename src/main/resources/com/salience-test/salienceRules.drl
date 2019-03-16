@@ -1,0 +1,28 @@
+package com.salienceTest;
+import com.drools.model.Person
+dialect  "mvel"
+
+rule "salienceRules-1"
+    salience 3
+    when
+    then
+        System.out.println("salienceRules-1 被执行了");
+end
+
+rule "salienceRules-2"
+    salience 2
+    when
+    then
+        System.out.println("salienceRules-2 被执行了");
+end
+
+rule "salienceRules-3"
+    /**
+        动态设置优先级
+    **/
+    salience lev
+    when
+        $p : Person(lev : age)
+    then
+        System.out.println("salienceRules-3 被执行了");
+end

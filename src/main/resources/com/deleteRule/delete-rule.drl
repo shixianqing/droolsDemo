@@ -1,0 +1,17 @@
+package com.deleteRule;
+import com.drools.model.Person
+dialect  "mvel"
+
+rule "delete-rule-1"
+    when
+        Person()
+    then
+        System.out.println("delete-rule-1 执行了");
+end
+
+//rule "delete-rule-2"
+//    when
+//        Person(age == 23)
+//    then
+//        System.out.println("delete-rule-2 执行了");
+//end

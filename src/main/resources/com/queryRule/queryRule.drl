@@ -1,0 +1,16 @@
+package com.queryRule;
+import com.drools.model.Person
+dialect  "mvel"
+
+rule "queryRule"
+    when
+    then
+end
+
+query "query-by-age"
+    $p1 : Person(age == 33)
+end
+
+query "query-by-ageParam" (Integer ageParam)
+    $person : Person(age >= ageParam)
+end

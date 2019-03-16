@@ -1,0 +1,19 @@
+package com.rules;
+import com.drools.model.Car
+dialect  "mvel"
+
+rule "test-age-older-than-60"
+    when
+        $car : Car(person.age > 60 || person.age==60)
+    then
+        System.out.println("test-age-older-than-60："+$car.getPerson().getAge());
+        $car.setDiscount(80);
+end
+
+rule "test-age-other"
+    when
+        $car : Car(person.age < 60)
+    then
+        System.out.println("test-age-older-than-60："+$car.getPerson().getAge());
+        $car.setDiscount(90);
+end

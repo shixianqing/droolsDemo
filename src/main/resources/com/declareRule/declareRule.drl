@@ -1,0 +1,9 @@
+package com.declareRule;
+dialect  "mvel"
+
+rule "declareRule"
+    when
+    then
+end
+
+declare Address
