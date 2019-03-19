@@ -3,8 +3,11 @@ import com.drools.model.Goods
 dialect  "mvel"
 
 rule "goods"
+no-loop true
     when
         $goods : Goods(discount == 100)
     then
-        $goods.setDiscount(90);
+        $goods.setDiscount(11);
+        System.out.println("goods 规则进来了");
+        update($goods)
 end

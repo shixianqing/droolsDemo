@@ -23,7 +23,9 @@ public class MavenLoadRulesTest {
 
     @Test
     public void test(){
-        KieSession kieSession = KieServices.Factory.get().newKieClasspathContainer().newKieSession("ksession-maven-load-rules");
+        KieSession kieSession = KieServices.Factory.get()
+                            .newKieClasspathContainer()
+                            .newKieSession("ksession-maven-load-rules");
         Person person = new Person();
         person.setAge(99);
 

@@ -1,5 +1,6 @@
 package com.rules;
 import com.drools.model.Car
+import com.drools.model.Goods
 dialect  "mvel"
 
 rule "test-age-older-than-60"

@@ -1,6 +1,6 @@
 <kmodule xmlns="http://jboss.org/kie/6.0.0/kmodule">
     <kbase name="rules" packages="com.rules">
-        <ksession name="ksession-rules"/>
+        <ksession name="ksession-rules" default="true"/>
     </kbase>
     <kbase name="rule1" packages="com.less">
         <ksession name="state-less-session" type="stateless"/>
