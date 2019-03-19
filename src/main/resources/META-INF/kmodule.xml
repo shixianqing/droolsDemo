@@ -51,5 +51,8 @@
     <kbase name="declareBase" packages="com.declareRule">
         <ksession name="declareRule"/>
     </kbase>
+    <kbase name="listBase" packages="com.listRule">
+        <ksession name="listRule"/>
+    </kbase>
 
 </kmodule>

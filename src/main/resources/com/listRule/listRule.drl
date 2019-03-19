@@ -1,0 +1,13 @@
+package com.listRule;
+import java.util.List
+import com.drools.model.*
+dialect  "mvel"
+
+rule "listRule"
+    when
+        $list : List()
+        $p : Person(age == 12) from $list
+    then
+
+    System.out.println($p);
+end

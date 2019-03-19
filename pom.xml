@@ -9,6 +9,11 @@
     <version>1.0-SNAPSHOT</version>
 
     <dependencies>
+      <!--  <dependency>
+            <groupId>com.ysj.drools</groupId>
+            <artifactId>drools-rules</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>-->
         <dependency>
             <groupId>org.drools</groupId>
             <artifactId>drools-core</artifactId>
@@ -34,31 +39,33 @@
             <artifactId>kie-api</artifactId>
             <version>7.0.0.Final</version>
         </dependency>
+
+        <!--动态加载maven库中的规则jar包-->
         <dependency>
-            <groupId>org.projectlombok</groupId>
-            <artifactId>lombok</artifactId>
-            <optional>true</optional>
+            <groupId>org.kie</groupId>
+            <artifactId>kie-ci</artifactId>
+            <version>7.0.0.Final</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.slf4j/slf4j-api -->
-        <dependency>
+       <!-- <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
             <version>1.7.26</version>
-        </dependency>
+        </dependency>-->
         <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-classic -->
-        <dependency>
+ <!--       <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version>
             <scope>test</scope>
         </dependency>
 
-        <!-- https://mvnrepository.com/artifact/ch.qos.logback/logback-core -->
+        &lt;!&ndash; https://mvnrepository.com/artifact/ch.qos.logback/logback-core &ndash;&gt;
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
             <version>1.2.3</version>
-        </dependency>
+        </dependency>-->
 
         <dependency>
             <groupId>junit</groupId>
